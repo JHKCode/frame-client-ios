@@ -8,14 +8,32 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var coreDataManager: CoreDataManager?
+    var frameUserManager: FrameUserManager = FrameUserManager.init(storage: FrameUserDefaults())
+    var frameController: FrameController = FrameController.init()
+    
+    static func instance() -> AppDelegate {
+        return UIApplication.sharedApplication().delegate as! AppDelegate
+    }
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if self.window == nil {
+            self.window = UIWindow.init()
+            self.window?.rootViewController = UIViewController.init()
+            self.window?.makeKeyAndVisible()
+            
+            frameUserManager.signIn()
+        }
+        
+        
         return true
     }
 

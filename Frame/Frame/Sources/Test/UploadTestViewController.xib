@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UploadTestViewController" customModule="FrameTest">
+            <connections>
+                <outlet property="imageView" destination="I5e-oq-RS2" id="gZD-2b-ZnS"/>
+                <outlet property="topLayoutGuideConstraint" destination="fK0-KB-UIq" id="fnt-N8-m9D"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kv1-x8-HjP">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfY-uZ-jhv">
+                            <rect key="frame" x="8" y="8" width="89" height="30"/>
+                            <state key="normal" title="Select Image"/>
+                            <connections>
+                                <action selector="handleSelectButton:" destination="-1" eventType="touchUpInside" id="MRs-hi-7xK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbU-jh-x3U">
+                            <rect key="frame" x="106" y="8" width="50" height="30"/>
+                            <state key="normal" title="Upload"/>
+                            <connections>
+                                <action selector="handleUploadButton:" destination="-1" eventType="touchUpInside" id="1nX-zY-IyH"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I5e-oq-RS2">
+                            <rect key="frame" x="8" y="46" width="200" height="200"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="3bv-Az-ZGo"/>
+                                <constraint firstAttribute="height" constant="200" id="RJc-jH-g5X"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="I5e-oq-RS2" firstAttribute="top" secondItem="Kv1-x8-HjP" secondAttribute="top" constant="46" id="fxj-VV-EDw"/>
+                        <constraint firstItem="I5e-oq-RS2" firstAttribute="leading" secondItem="Kv1-x8-HjP" secondAttribute="leading" constant="8" id="z9V-2M-yNR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Kv1-x8-HjP" secondAttribute="trailing" id="4qv-ZW-SvJ"/>
+                <constraint firstItem="Kv1-x8-HjP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Bbm-W3-rBb"/>
+                <constraint firstItem="Kv1-x8-HjP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fK0-KB-UIq"/>
+                <constraint firstAttribute="bottom" secondItem="Kv1-x8-HjP" secondAttribute="bottom" id="y1P-gF-JRZ"/>
+            </constraints>
+            <point key="canvasLocation" x="746" y="518"/>
+        </view>
+    </objects>
+</document>
